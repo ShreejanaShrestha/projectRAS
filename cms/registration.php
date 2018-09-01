@@ -56,7 +56,7 @@ include 'regprocess.php';
 			</div>
 			<div class="input-group">
 				<label for=" regnum">registration number</label>
-				<input type="number" name="registration" value="<?php echo($registration_number); ?>">
+				<input type="text" name="registration" value="<?php echo($registration_number); ?>">
 			</div>
 			<div class="input-group">
 				<label for="symbolnum">symbol number</label>

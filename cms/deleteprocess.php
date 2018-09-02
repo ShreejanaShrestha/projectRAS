@@ -42,11 +42,12 @@ if (isset($_POST['search'])) {
 			while ($data = mysqli_fetch_assoc($run)) {
 				?>
 				<tr>
+					
 					<td><?php echo $data['student_name']; ?></td>
-					<td><?php echo $data['college_name']; ?></td>
 					<td><?php echo $data['registration_num'];?></td>
 					<td><?php echo $data['symbol_num'];?></td>
 					<td><?php echo $data['batch'];?></td>
+					
 					<td><a href="deletion.php?symnum=<?php echo $data['symbol_num']; ?>">Delete</a></td> 
 				</tr>
 				<?php

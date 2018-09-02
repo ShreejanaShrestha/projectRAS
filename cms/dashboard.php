@@ -26,6 +26,9 @@
                 </ol>
             </div>
         </div>
+        <div>
+            <h1 >Welcome to the dashboard</h1>
+        </div>
         <!-- /.row -->
     </div>
     <!-- /.container-fluid -->

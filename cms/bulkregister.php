@@ -10,13 +10,13 @@ include 'regprocess.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Upload student result</title>
+	<title>Register student in bulk</title>
 </head>
 <body>
 	<div class="container">
-		<form action="upload_process.php" method="post" enctype="multipart/form-data">
+		<form action="upload_st_process.php" method="post" enctype="multipart/form-data">
 			<fieldset>
-				<legend>Upload result</legend>
+				<legend>Upload to register student</legend>
 			<?php 
 			include '../inc/alert.php';
 			?>
@@ -30,7 +30,7 @@ include 'regprocess.php';
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="submit" value="Upload" name="uploadBtn" class="btn btn-info">
+						<input type="submit" value="upload" name="uploadBtn" class="btn btn-info">
 					</div>
 				</div>
 			</div>

@@ -47,11 +47,12 @@ if (isset($_POST['search'])) {
 				?>
 				<tr>
 					<td><?php echo $data['student_name']; ?></td>
-					<td><?php echo $data['college_name']; ?></td>
 					<td><?php echo $data['email']; ?></td>
+					<td><?php echo $data['address']; ?></td>
 					<td><?php echo $data['registration_num'];?></td>
 					<td><?php echo $data['symbol_num'];?></td>
 					<td><?php echo $data['batch'];?></td>
+					<td><?php echo $data['contact_num'];?></td>td>
 					<td><a href="deleteform.php?sid=<?php echo $data['id'];  ?>">Delete</a></td> 
 				</tr>
 				<?php

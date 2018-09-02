@@ -20,6 +20,7 @@
 			<?php /*include 'inc/errors.php';*/ ?>
 			<?php include 'inc/alert.php'; ?>
 			<div class="input-group">
+<<<<<<< HEAD
 				<label for="registration no">Registration number</label>
 				<input type="text" name="regnum" id="regnum" placeholder="enter registration number" >
 				<span id="regError" class="text-danger font-weight-bold"></span>
@@ -30,6 +31,34 @@
 				<span id="symError" class="text-danger font-weight-bold"></span>
 			</div>
 			<div class="input-group">
+=======
+				<label for="year">Batch</label>
+				<input type="text" name="regnum" id="regnum" placeholder="Enter your year" >
+				<span id="regError" class="text-danger font-weight-bold"></span>
+			</div>
+			
+			<div class="input-group">
+				<label for="semester">Semester</label>
+				<select name="semester" id="semId">
+					<option value="1">choose semester</option>
+					<option value="2">1st sem</option>
+					<option value="3">2nd sem</option>
+					<option value="4">3rd sem</option>
+					<option value="5">4th sem</option>
+					<option value="6">5th sem</option>
+					<option value="7">6th sem</option>
+					<option value="8">7th sem</option>
+					<option value="9">8th sem</option>
+				</select>
+				<span id="semError" class="text-danger font-weight-bold"></span>
+			</div>
+			<div class="input-group">
+				<label for="symbol no">Symbol number</label>
+				<input type="text" name="symnum" id="symnum" placeholder="Enter your roll number" >
+				<span id="symError" class="text-danger font-weight-bold"></span>
+			</div>
+			<div class="input-group">
+>>>>>>> 5f2c0c27ae75ac455e64b16654fadab26217a892
 				<button type="submit" name="show" class="btn">show</button>
 			</div>
 		</form>
@@ -42,12 +71,26 @@
 			var symNum = document.getElementById('symnum').value;
 			var status = false;
 
+<<<<<<< HEAD
 			if (regNum == "") {
 				document.getElementById('regError').innerHTML = "* registration number is required"
 				return status = false;
 			}else{
 				document.getElementById('regError').innerHTML = "";
 				status = true;
+=======
+			if (regNum != "") {
+				if (regNum.match(num)) {
+					document.getElementById('regError').innerHTML = "";
+					status = true;
+				}else{
+					document.getElementById('regError').innerHTML = "* your batch";
+					status = false;
+				}
+			}else{
+				document.getElementById('regError').innerHTML = "* batch is required";
+				status = false;
+>>>>>>> 5f2c0c27ae75ac455e64b16654fadab26217a892
 			}
 
 			if (symNum != "") {

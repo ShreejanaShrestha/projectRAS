@@ -1,10 +1,10 @@
 
 <?php 
-ob_start();
+
 include '../inc/session.php';
 include '../inc/template_header.php';
 include '../inc/navigation.php';
-
+//include 'student_detail.php';
 ?>
 <div id="page-wrapper">
 	<div class="container-fluid">
@@ -36,20 +36,23 @@ include '../inc/navigation.php';
 <?php 
 include '../inc/dbcon.php';
 $studentName = $_POST['student_name'];
-$collegeName = $_POST['college_name'];
+$contactNumber = $_POST['contact_number'];
+$address= $_POST['address'];
 $email = $_POST['email'];
 $batch = $_POST['batch'];
 $symbolNumber = $_POST['symbol_number'];
 $registrationNumber = $_POST['registration_number'];
 /*echo $symbolNumber; die();*/
 
-$run = "UPDATE registration SET symbol_num='$symbolNumber',registration_num=$registrationNumber,student_name='$studentName',college_name='$collegeName',email='$email',batch='$batch' WHERE symbol_num='$symbolNumber'";
+$qry = "UPDATE registration SET symbol_num='$symbolNumber', registration_num='$registrationNumber', address='$address', student_name='$studentName', contact_num='$contactNumber', email='$email',batch='$batch' WHERE symbol_num='$symbolNumber'";
 $run = mysqli_query($con, $qry);
 if ($run == true) {
-	echo "success";
+	echo " Records Successfully updated ";
+	 //header('location:student_detail.php');
 }else{
 	echo "error";
 }
+
 /*if ($run == true) {
 	$_SESSION['success'] = "Data updated successfully";
 	@header('location:updatestudent.php');
@@ -61,7 +64,7 @@ if ($run == true) {
 <?php
 
 include '../inc/template_footer.php';
-ob_flush();
+
 ?>
 
 

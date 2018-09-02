@@ -46,37 +46,43 @@ $data = mysqli_fetch_assoc($run);
             <legend style="color:  grey"><b>Update Form</b></legend>
 		<div class="form-group">
 			<label for="student_name" class="control-label col-sm-3">Student name:</label>
-			<div class="col-sm-9">
+			<div class="col-sm-7">
 				<input type="text" class="form-control" name="student_name" value="<?php echo $data['student_name']; ?>">
 			</div>
 		</div>
 		<div class="form-group">
-            <label for="college_name" class="control-label col-sm-3">College name:</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" name="college_name" value="<?php echo $data['college_name']; ?>">
+            <label for="college_name" class="control-label col-sm-3">Contact number</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" name="contact_number" value="<?php echo $data['contact_num']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address" class="control-label col-sm-3">Address</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" name="address" value="<?php echo $data['address']; ?>">
             </div>
         </div>
         <div class="form-group">
             <label for="email" class="control-label col-sm-3">Email:</label>
-            <div class="col-sm-9">
+            <div class="col-sm-7">
                 <input type="text" class="form-control" name="email" value="<?php echo $data['email']; ?>">
             </div>
         </div>
         <div class="form-group">
             <label for="batch" class="control-label col-sm-3">Batch:</label>
-            <div class="col-sm-9">
+            <div class="col-sm-7">
                 <input type="text" class="form-control" name="batch" value="<?php echo $data['batch']; ?>">
             </div>
         </div>
         <div class="form-group">
             <label for="symbol_number" class="control-label col-sm-3">Symbol number:</label>
-            <div class="col-sm-9">
+            <div class="col-sm-7">
                 <input type="text" class="form-control" name="symbol_number" value="<?php echo $data['symbol_num']; ?>">
             </div>
         </div>
         <div class="form-group">
          <label for="registration_number" class="control-label col-sm-3">Registration number:</label>
-         <div class="col-sm-9">
+         <div class="col-sm-7">
             <input type="text" class="form-control" name="registration_number" value="<?php echo $data['registration_num']; ?>">
         </div>
     </div>
